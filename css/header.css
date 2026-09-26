@@ -7,19 +7,23 @@ header {
   min-height: 80px;
 }
 
+/* LOGO MOBILE */
 .logo {
   display: block;
-  width: 50px;
-  height: 50px;
   margin-left: 60px;
 }
 
-.logo img {
-  width: 100%;
-  height: 100%;
+.logo-mobile {
   display: block;
+  width: 50px;
+  height: 50px;
 }
 
+.logo-desktop {
+  display: none;
+}
+
+/* MENU */
 .navigation-menu {
   margin-right: 60px;
 }
@@ -55,6 +59,7 @@ nav {
   white-space: nowrap;
 }
 
+/* TABLET */
 @media screen and (min-width: 768px) {
   .navigation-menu label {
     display: none;
@@ -71,5 +76,44 @@ nav {
     display: flex;
     align-items: center;
     gap: 70px;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  header {
+    min-height: 100px;
+    padding: 0 120px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .logo-mobile {
+    display: none;
+  }
+
+  .logo-desktop {
+    display: block;
+    width: auto;
+    height: 50px;
+  }
+
+  .navigation-menu {
+    margin-right: 0;
+  }
+
+  .list-links {
+    gap: 50px;
+  }
+  .navigation-menu a:hover {
+    color: var(--primary-color);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  header {
+    padding: 38px 160px;
   }
 }
