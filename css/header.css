@@ -13,13 +13,13 @@ header {
   margin-left: 60px;
 }
 
-.logo-mobile {
+.img-mobile {
   display: block;
   width: 50px;
   height: 50px;
 }
 
-.logo-desktop {
+.img-desktop {
   display: none;
 }
 
