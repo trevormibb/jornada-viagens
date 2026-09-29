@@ -38,6 +38,9 @@
     background-size: cover;
     background-position: center;
   }
+  .hero h2 {
+    padding: 88px 160px;
+  }
 }
 
 /* TELAS GRANDES */
