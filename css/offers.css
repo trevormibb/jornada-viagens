@@ -1,6 +1,6 @@
 .card {
   color: var(--text-secondary-color);
-  background-color: black;
+  background-color: var(--background-tertiary-color);
   width: 312px;
   height: 288px;
   box-sizing: border-box;
@@ -13,8 +13,9 @@
   display: block;
   background-color: transparent;
   position: static;
+  min-height: auto;
   padding: 0;
-  margin-bottom: 24px;
+  margin: 0 0 24px;
 }
 
 .card header p {
@@ -34,11 +35,17 @@
   display: inline-block;
 }
 
+.card footer {
+  margin: 0;
+  padding: 0;
+}
+
 @media screen and (min-width: 1024px) {
   .card {
     width: 588px;
     height: 308px;
   }
+
   .card header h3 {
     font-size: 48px;
   }
