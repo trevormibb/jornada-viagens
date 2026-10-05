@@ -65,25 +65,36 @@ body {
 .button {
   width: 280px;
   height: 64px;
+
   color: var(--text-secondary-color);
+  background-color: var(--secundary-color);
+
   font-weight: var(--title-weight);
   font-size: 20px;
-  background-color: var(--button-secondary-color);
+
   border-radius: 16px;
+
   display: inline-block;
+
   text-decoration: none;
-  line-height: 64px;
   text-align: center;
+
+  line-height: 64px;
+
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
 }
 
 @media screen and (min-width: 768px) {
   .section-title h2 {
     font-size: 32px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .button {
-    background-color: var(--button-primary-color);
   }
 }
