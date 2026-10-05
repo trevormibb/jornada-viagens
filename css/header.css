@@ -8,6 +8,7 @@ header {
 }
 
 /* LOGO MOBILE */
+
 .logo {
   display: block;
   margin-left: 60px;
@@ -24,8 +25,20 @@ header {
 }
 
 /* MENU */
+
 .navigation-menu {
   margin-right: 60px;
+}
+
+.navigation-menu label {
+  display: block;
+  cursor: pointer;
+}
+
+.navigation-menu label img {
+  display: block;
+  width: 32px;
+  height: 32px;
 }
 
 input[type="checkbox"]:checked ~ nav {
@@ -35,6 +48,7 @@ input[type="checkbox"]:checked ~ nav {
   left: 0;
   width: 100%;
   background-color: var(--background-tertiary-color);
+  z-index: 10;
 }
 
 nav {
@@ -49,6 +63,7 @@ nav {
 
 .list-links li {
   margin: 0;
+  padding: 16px 60px;
 }
 
 .list-links li a {
@@ -60,6 +75,7 @@ nav {
 }
 
 /* TABLET */
+
 @media screen and (min-width: 768px) {
   .navigation-menu label {
     display: none;
@@ -77,7 +93,13 @@ nav {
     align-items: center;
     gap: 70px;
   }
+
+  .list-links li {
+    padding: 0;
+  }
 }
+
+/* DESKTOP */
 
 @media screen and (min-width: 1024px) {
   header {
@@ -110,6 +132,8 @@ nav {
     color: var(--primary-color);
   }
 }
+
+/* TELAS GRANDES */
 
 @media screen and (min-width: 1920px) {
   header {
