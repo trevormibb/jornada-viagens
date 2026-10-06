@@ -1,0 +1,182 @@
+.popular-destinations {
+  padding: 64px 24px;
+}
+
+/* CONTAINER */
+
+.popular-destinations__list {
+  width: 100%;
+  max-width: 312px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 32px;
+}
+
+/* CARD */
+
+.popular-destinations__card {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+/* IMAGEM */
+
+.popular-destinations__image {
+  width: 100%;
+  height: 180px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* CONTEÚDO */
+
+.popular-destinations__content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 16px;
+}
+
+/* TOKYO / OSAKA */
+
+.popular-destinations__title {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: var(--title-weight);
+  line-height: 32px;
+}
+
+/* DESCRIÇÃO */
+
+.popular-destinations__description {
+  width: 100%;
+
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: var(--text-weight);
+
+  line-height: 1.5;
+
+  box-sizing: border-box;
+}
+
+/* BOTÃO */
+
+.popular-destinations__button {
+  width: 100%;
+  height: 48px;
+
+  line-height: 48px;
+
+  font-size: 14px;
+
+  border-radius: 8px;
+
+  background-color: var(--secundary-color);
+}
+
+.popular-destinations__button:hover {
+  background-color: var(--primary-color);
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+  .popular-destinations {
+    padding: 64px 60px;
+  }
+
+  .popular-destinations__list {
+    max-width: none;
+
+    gap: 32px;
+  }
+
+  .popular-destinations__image {
+    height: 454px;
+  }
+
+  .popular-destinations__title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .popular-destinations__description {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .popular-destinations__button {
+    width: 280px;
+    height: 64px;
+
+    line-height: 64px;
+
+    font-size: 16px;
+  }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1024px) {
+  .popular-destinations {
+    padding: 88px 121.5px;
+  }
+
+  .popular-destinations__list {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    flex-direction: row;
+
+    gap: 24px;
+  }
+
+  .popular-destinations__card {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .popular-destinations__image {
+    width: 100%;
+    height: 450px;
+  }
+
+  .popular-destinations__title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .popular-destinations__description {
+    width: 100%;
+
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .popular-destinations__button {
+    width: 280px;
+    height: 64px;
+
+    line-height: 64px;
+
+    font-size: 16px;
+  }
+}

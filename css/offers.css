@@ -3,25 +3,31 @@
 }
 
 /* CONTAINER DOS CARDS */
+
 .offers-cards {
+  width: 100%;
+  max-width: 312px;
+
+  margin: 32px auto 0;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   gap: 24px;
-  margin-top: 32px;
 }
 
 /* CARD */
-.card {
-  color: var(--text-secondary-color);
-  background-color: var(--background-tertiary-color);
 
-  width: 312px;
+.card {
+  width: 100%;
   height: 288px;
 
   box-sizing: border-box;
 
   padding: 24px 16px;
+
+  color: var(--text-secondary-color);
+  background-color: var(--background-tertiary-color);
 
   border-radius: 16px;
 
@@ -32,43 +38,52 @@
   background-size: cover;
 }
 
-/* HEADER DENTRO DO CARD */
+/* HEADER DO CARD */
+
 .card header {
   display: block;
-  background-color: transparent;
-  position: static;
 
   min-height: auto;
 
-  padding: 0;
   margin: 0 0 24px;
+  padding: 0;
+
+  position: static;
+
+  background-color: transparent;
 }
 
 /* HOTEL + AÉREO */
+
 .card header p {
+  margin: 0;
+
   font-size: 20px;
   font-weight: var(--text-weight);
-  margin: 0;
 }
 
-/* NOME DO DESTINO */
+/* DESTINO */
+
 .card header h3 {
+  margin: 8px 0 0;
+
   font-size: 40px;
   font-weight: var(--title-weight);
-
-  margin: 8px 0 0;
+  line-height: 1.2;
 }
 
 /* PREÇO */
+
 .card header span {
   display: block;
 
-  font-size: 32px;
-
   margin-top: 24px;
+
+  font-size: 32px;
 }
 
 /* FOOTER */
+
 .card footer {
   margin: 0;
   padding: 0;
@@ -93,27 +108,48 @@
 }
 
 /* TABLET */
+
 @media screen and (min-width: 768px) {
+  .offers {
+    padding: 40px 60px;
+  }
+
   .offers-cards {
+    max-width: none;
+
     flex-direction: row;
     flex-wrap: wrap;
 
-    justify-content: center;
-    align-items: center;
-
     gap: 24px;
+  }
+
+  .card {
+    width: calc((100% - 24px) / 2);
   }
 }
 
 /* DESKTOP */
+
 @media screen and (min-width: 1024px) {
+  .offers {
+    padding: 40px 121.5px;
+  }
+
   .offers-cards {
-    max-width: 900px;
-    margin: 40px auto 0;
+    width: 100%;
+    max-width: none;
+
+    margin: 40px 0 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 24px;
   }
 
   .card {
-    width: 420px;
+    width: calc((100% - 24px) / 2);
     height: 308px;
   }
 
@@ -123,16 +159,5 @@
 
   .card header span {
     font-size: 40px;
-  }
-}
-
-/* DESKTOP GRANDE */
-@media screen and (min-width: 1440px) {
-  .offers-cards {
-    max-width: 1200px;
-  }
-
-  .card {
-    width: 588px;
   }
 }
