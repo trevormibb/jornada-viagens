@@ -1,35 +1,19 @@
 .categories {
-  padding: 88px 24px 64px;
+  padding: 64px 24px;
 }
-
-/* LISTA */
 
 .categories__list {
   width: 100%;
-  max-width: 312px;
 
-  margin: 0 auto;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
 
-  display: grid;
-  grid-template-columns: 1fr;
-
-  gap: 16px;
-
-  list-style: none;
+  gap: 24px;
 }
-
-/* ITEM */
-
-.categories__item {
-  width: 100%;
-}
-
-/* CARD */
 
 .categories__link {
   width: 100%;
-  min-height: 216px;
+  min-height: 180px;
 
   box-sizing: border-box;
 
@@ -43,62 +27,41 @@
 
   gap: 16px;
 
-  background-color: var(--background-secondary-color);
-
   border-radius: 12px;
 
   color: var(--text-primary-color);
+  background-color: var(--background-secondary-color);
 
   text-align: center;
   text-decoration: none;
-
-  overflow: hidden;
-
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease;
 }
 
-/* ÍCONE */
-
 .categories__icon {
-  display: block;
+  width: 64px;
+  height: 64px;
 
-  width: 48px;
-  height: 48px;
+  display: block;
 
   object-fit: contain;
 }
 
-/* TEXTO */
-
 .categories__name {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: var(--title-weight);
-  line-height: 32px;
 
-  text-align: center;
+  line-height: 1.2;
 
   white-space: nowrap;
 }
 
-/* PACOTES NACIONAIS */
+/* PRIMEIROS DOIS QUEBRAM EM 2 LINHAS */
 
-.categories__item:nth-child(1) .categories__name {
-  max-width: 190px;
-
-  white-space: normal;
-}
-
-/* PACOTES INTERNACIONAIS */
-
-.categories__item:nth-child(2) .categories__name {
+.categories__link:nth-child(1) .categories__name,
+.categories__link:nth-child(2) .categories__name {
   max-width: 210px;
 
   white-space: normal;
 }
-
-/* FOCO */
 
 .categories__link:focus-visible {
   outline: 3px solid var(--secundary-color);
@@ -113,11 +76,20 @@
   }
 
   .categories__list {
-    max-width: none;
-
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
 
     gap: 24px;
+  }
+
+  .categories__link {
+    width: calc((100% - 24px) / 2);
+    min-height: 216px;
+  }
+
+  .categories__icon {
+    width: 48px;
+    height: 48px;
   }
 
   .categories__name {
@@ -133,33 +105,11 @@
     padding: 88px 121.5px 64px;
   }
 
-  .categories__list {
-    width: 100%;
-    max-width: none;
-
-    margin: 0;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 24px;
-  }
-
   .categories__link {
-    min-height: 216px;
-  }
-
-  .categories__icon {
-    width: 48px;
-    height: 48px;
-  }
-
-  .categories__name {
-    font-size: 28px;
-    line-height: 32px;
+    width: calc((100% - 72px) / 4);
   }
 
   .categories__link:hover {
     background-color: #eeeeee;
-    transform: translateY(-2px);
   }
 }

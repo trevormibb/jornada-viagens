@@ -2,11 +2,8 @@
   padding: 40px 24px;
 }
 
-/* CONTAINER DOS CARDS */
-
 .offers-cards {
   width: 100%;
-  max-width: 312px;
 
   margin: 32px auto 0;
 
@@ -16,80 +13,87 @@
   gap: 24px;
 }
 
-/* CARD */
-
 .card {
   width: 100%;
-  height: 288px;
+  min-height: 288px;
 
   box-sizing: border-box;
 
   padding: 24px 16px;
 
-  color: var(--text-secondary-color);
-  background-color: var(--background-tertiary-color);
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-between;
 
   border-radius: 16px;
 
-  text-align: center;
+  color: var(--text-secondary-color);
+  background-color: var(--background-tertiary-color);
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  text-align: center;
 }
 
-/* HEADER DO CARD */
+/* RESET DO HEADER GLOBAL */
 
-.card header {
-  display: block;
+.card .card__header {
+  width: 100%;
 
   min-height: auto;
 
-  margin: 0 0 24px;
+  margin: 0;
   padding: 0;
+
+  display: block;
 
   position: static;
 
   background-color: transparent;
 }
 
-/* HOTEL + AÉREO */
-
-.card header p {
-  margin: 0;
-
+.card__header p {
   font-size: 20px;
   font-weight: var(--text-weight);
 }
 
-/* DESTINO */
+/* CONTEÚDO */
 
-.card header h3 {
-  margin: 8px 0 0;
+.card__content {
+  width: 100%;
 
-  font-size: 40px;
-  font-weight: var(--title-weight);
-  line-height: 1.2;
-}
-
-/* PREÇO */
-
-.card header span {
-  display: block;
-
-  margin-top: 24px;
-
-  font-size: 32px;
-}
-
-/* FOOTER */
-
-.card footer {
   margin: 0;
   padding: 0;
 }
 
-/* IMAGENS */
+.card__content h3 {
+  font-size: 40px;
+  font-weight: var(--title-weight);
+
+  line-height: 1.2;
+}
+
+.card__content p {
+  margin-top: 24px;
+
+  font-size: 32px;
+  font-weight: var(--title-weight);
+}
+
+/* FOOTER */
+
+.card__footer {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* BACKGROUNDS */
 
 .card.japao {
   background-image: url("../img/bg-card-japao.png");
@@ -115,8 +119,6 @@
   }
 
   .offers-cards {
-    max-width: none;
-
     flex-direction: row;
     flex-wrap: wrap;
 
@@ -136,28 +138,6 @@
   }
 
   .offers-cards {
-    width: 100%;
-    max-width: none;
-
-    margin: 40px 0 0;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    gap: 24px;
-  }
-
-  .card {
-    width: calc((100% - 24px) / 2);
-    height: 308px;
-  }
-
-  .card header h3 {
-    font-size: 48px;
-  }
-
-  .card header span {
-    font-size: 40px;
+    margin-top: 40px;
   }
 }

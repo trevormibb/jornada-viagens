@@ -6,7 +6,6 @@
 
 .popular-destinations__list {
   width: 100%;
-  max-width: 312px;
 
   margin: 0 auto;
 
@@ -27,11 +26,12 @@
   gap: 16px;
 }
 
-/* IMAGEM */
+/* IMAGEM - MOBILE */
 
 .popular-destinations__image {
   width: 100%;
-  height: 180px;
+
+  aspect-ratio: 4 / 5;
 
   display: block;
 
@@ -58,6 +58,7 @@
 
   font-size: 20px;
   font-weight: var(--title-weight);
+
   line-height: 32px;
 }
 
@@ -103,13 +104,18 @@
   }
 
   .popular-destinations__list {
-    max-width: none;
+    width: 100%;
 
     gap: 32px;
   }
 
   .popular-destinations__image {
+    width: 100%;
     height: 454px;
+
+    aspect-ratio: auto;
+
+    object-fit: cover;
   }
 
   .popular-destinations__title {
@@ -141,7 +147,6 @@
 
   .popular-destinations__list {
     width: 100%;
-    max-width: none;
 
     margin: 0;
 
@@ -157,6 +162,10 @@
   .popular-destinations__image {
     width: 100%;
     height: 450px;
+
+    aspect-ratio: auto;
+
+    object-fit: cover;
   }
 
   .popular-destinations__title {
