@@ -10,16 +10,17 @@
 
 .hero h2 {
   width: calc(100% - 48px);
-  max-width: 1200px;
+  max-width: var(--content-max-width);
 
-  margin: 0 auto;
-  padding: 64px 0;
+  margin-left: auto;
+  margin-right: auto;
 
-  box-sizing: border-box;
+  padding-top: 64px;
+  padding-bottom: 64px;
 
-  font-size: 20px;
   font-weight: var(--text-weight);
-  line-height: 150%;
+  font-size: 20px;
+  line-height: 1.5;
 
   text-align: center;
 }
@@ -34,9 +35,10 @@
   }
 
   .hero h2 {
-    width: calc(100% - 96px);
+    width: calc(100% - 120px);
 
-    padding: 88px 0;
+    padding-top: 88px;
+    padding-bottom: 88px;
 
     font-size: 24px;
   }
@@ -52,20 +54,6 @@
   }
 
   .hero h2 {
-    width: calc(100% - 240px);
-    max-width: 1200px;
-
-    padding: 88px 0;
-
     font-size: 32px;
-    line-height: 150%;
-  }
-}
-
-/* TELAS GRANDES */
-
-@media screen and (min-width: 1440px) {
-  .hero h2 {
-    width: 1200px;
   }
 }

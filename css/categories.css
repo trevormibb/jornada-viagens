@@ -1,9 +1,14 @@
 .categories {
-  padding: 64px 24px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 .categories__list {
-  width: 100%;
+  width: calc(100% - 48px);
+  max-width: var(--content-max-width);
+
+  margin-left: auto;
+  margin-right: auto;
 
   display: flex;
   flex-direction: column;
@@ -14,8 +19,6 @@
 .categories__link {
   width: 100%;
   min-height: 180px;
-
-  box-sizing: border-box;
 
   padding: 24px 16px;
 
@@ -48,13 +51,10 @@
 .categories__name {
   font-size: 20px;
   font-weight: var(--title-weight);
-
   line-height: 1.2;
 
   white-space: nowrap;
 }
-
-/* PRIMEIROS DOIS QUEBRAM EM 2 LINHAS */
 
 .categories__link:nth-child(1) .categories__name,
 .categories__link:nth-child(2) .categories__name {
@@ -72,14 +72,15 @@
 
 @media screen and (min-width: 768px) {
   .categories {
-    padding: 88px 60px 64px;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   .categories__list {
+    width: calc(100% - 120px);
+
     flex-direction: row;
     flex-wrap: wrap;
-
-    gap: 24px;
   }
 
   .categories__link {
@@ -101,10 +102,6 @@
 /* DESKTOP */
 
 @media screen and (min-width: 1024px) {
-  .categories {
-    padding: 88px 121.5px 64px;
-  }
-
   .categories__link {
     width: calc((100% - 72px) / 4);
   }
