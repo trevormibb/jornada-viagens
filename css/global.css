@@ -20,14 +20,7 @@
   --text-weight: 400;
   --menu-text-weight: 500;
 
-  /*
-    Margem geral responsiva do site.
-
-    Mobile: 24px
-    Tablet: cresce proporcionalmente
-    Desktop: no máximo 121.5px
-  */
-  --page-gutter: clamp(24px, 7.5vw, 121.5px);
+  --content-max-width: 1200px;
 }
 
 *,
@@ -60,18 +53,25 @@ body {
   background-color: var(--background-primary-color);
 }
 
-/* TÍTULOS DAS SEÇÕES */
+/* =========================
+   TÍTULOS DAS SEÇÕES
+   ========================= */
 
 .section-title {
-  width: calc(100% - (var(--page-gutter) * 2));
+  width: 100%;
 
   margin-left: auto;
   margin-right: auto;
+
+  text-align: center;
 }
 
 .section-title h2 {
+  margin: 0;
+
   font-size: 28px;
   font-weight: var(--title-weight);
+
   line-height: 1.2;
 
   text-align: center;
@@ -88,7 +88,9 @@ body {
   background-color: var(--secundary-color);
 }
 
-/* BOTÃO GLOBAL */
+/* =========================
+   BOTÃO GLOBAL
+   ========================= */
 
 .button {
   width: min(280px, 100%);
@@ -117,7 +119,9 @@ body {
   outline-offset: 3px;
 }
 
-/* TABLET */
+/* =========================
+   TABLET
+   ========================= */
 
 @media screen and (min-width: 768px) {
   .section-title h2 {
@@ -125,9 +129,15 @@ body {
   }
 }
 
-/* DESKTOP */
+/* =========================
+   DESKTOP
+   ========================= */
 
 @media screen and (min-width: 1024px) {
+  .section-title h2 {
+    font-size: 32px;
+  }
+
   .button:hover {
     background-color: var(--primary-color);
   }
