@@ -1,211 +1,87 @@
-/* =========================
-   MOBILE
-   ========================= */
-
 .offers {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  margin-bottom: 104px;
 }
-
 .offers-cards {
-  width: calc(100% - 48px);
-
-  margin: 32px auto 0;
-
   display: flex;
   flex-direction: column;
-
+  align-items: center;
   gap: 24px;
 }
 
-/* =========================
-   CARD
-   ========================= */
-
-.card {
-  width: 100%;
-  min-height: 288px;
-
-  padding: 24px 16px;
-
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: space-between;
-
+.offers-cards .card {
   color: var(--text-secondary-color);
-  background-color: var(--background-tertiary-color);
-
+  width: 312px;
+  height: 288px;
+  box-sizing: border-box;
+  padding: 24px 16px;
   border-radius: 16px;
-
   text-align: center;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  overflow: hidden;
+}
+.offers-cards .card header {
+  margin-bottom: 24px;
 }
 
-/* =========================
-   HEADER DO CARD
-   ========================= */
-
-.card .card__header {
-  width: 100%;
-
-  min-height: auto;
-
-  margin: 0;
-  padding: 0;
-
-  display: block;
-
-  position: static;
-
-  background-color: transparent;
-}
-
-.card__header p {
+.offers-cards .card header p {
   font-size: 20px;
   font-weight: var(--text-weight);
-
-  line-height: 1.2;
 }
 
-/* =========================
-   CONTEÚDO
-   ========================= */
-
-.card__content {
-  width: 100%;
-}
-
-.card__content h3 {
+.offers-cards .card header h3 {
   font-size: 40px;
   font-weight: var(--title-weight);
-
-  line-height: 1.2;
+  margin: 8px 0 0;
 }
-
-.card__content p {
-  margin-top: 24px;
-
+.offers-cards .card header span {
   font-size: 32px;
-  font-weight: var(--title-weight);
-
-  line-height: 1.2;
+  margin-top: 24px;
+  display: inline-block;
 }
 
-/* =========================
-   FOOTER DO CARD
-   ========================= */
-
-.card__footer {
-  width: 100%;
+.offers-cards .card.japao {
+  background: url(../img/bg-card-japao.jpg) no-repeat;
+  background-size: cover;
+}
+.offers-cards .card.san-andreas {
+  background: url(../img/bg-card-san-andreas.jpg) no-repeat;
+  background-size: cover;
+}
+.offers-cards .card.paraiba {
+  background: url(../img/bg-card-paraiba.jpg) no-repeat;
+  background-size: cover;
+}
+.offers-cards .card.manaus {
+  background: url(../img/bg-card-manaus.jpg) no-repeat;
+  background-size: cover;
 }
 
-/* =========================
-   IMAGENS
-   ========================= */
-
-.card.japao {
-  background-image: url("../img/bg-card-japao.png");
-}
-
-.card.san-andreas {
-  background-image: url("../img/bg-card-san-andreas.png");
-}
-
-.card.paraiba {
-  background-image: url("../img/bg-card-paraiba.png");
-}
-
-.card.manaus {
-  background-image: url("../img/bg-card-manaus.png");
-}
-
-/* =========================
-   TABLET
-   ========================= */
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .offers {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
-
+@media screen and (min-width: 768px) {
   .offers-cards {
-    width: calc(100% - 120px);
-    max-width: 648px;
-
-    margin: 24px auto 0;
-
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    gap: 24px;
+    justify-content: center;
   }
-
-  .card {
-    width: calc((100% - 24px) / 2);
-    height: 288px;
-    min-height: 288px;
-
-    padding: 24px 16px;
+}
+@media screen and (min-width: 1024px) {
+  .offers-cards .card {
+    width: 420px;
+    height: 308px;
   }
-
-  .card__header p {
-    font-size: 20px;
+  .offers-cards .card header h3 {
+    font-size: 48px;
   }
-
-  .card__content h3 {
+  .offers-cards .card header span {
     font-size: 40px;
   }
-
-  .card__content p {
-    font-size: 32px;
-  }
-
-  .card .button {
-    width: min(280px, 100%);
-    height: 64px;
-
-    line-height: 64px;
-
-    font-size: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .offers-cards .card {
+    width: 588px;
   }
 }
 
-/* =========================
-   DESKTOP
-   ========================= */
-
-@media screen and (min-width: 1024px) {
-  .offers {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
-
+@media screen and (min-width: 1920px) {
   .offers-cards {
-    width: calc(100% - 240px);
-    max-width: 1200px;
-
-    margin: 64px auto 0;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    gap: 24px;
-  }
-
-  .card {
-    width: calc((100% - 24px) / 2);
-
-    height: 308px;
-    min-height: 308px;
+    width: 1250px;
+    margin: 0 auto;
   }
 }

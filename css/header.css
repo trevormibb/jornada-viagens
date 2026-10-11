@@ -1,313 +1,104 @@
-/* =========================
-   HEADER PRINCIPAL
-   ========================= */
-
-body > header {
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  position: relative;
-
+.main-header {
   background-color: var(--background-tertiary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 38px 48px;
+  position: relative;
 }
-
-/* =========================
-   LOGO
-   ========================= */
 
 .logo {
-  display: block;
-
-  margin: 0;
-
-  line-height: 0;
+  display: inline-block;
+  width: 68px;
+  height: 64px;
 }
 
-.logo-mobile {
-  width: 50px;
-  height: 50px;
-
+.img-mobile {
   display: block;
-
-  object-fit: contain;
 }
 
-.logo-desktop {
+.img-desktop {
   display: none;
 }
-
-/* =========================
-   NAVEGAÇÃO
-   ========================= */
-
 .navigation-menu {
-  margin: 0;
+  margin-top: 24px;
 }
-
-/* BOTÃO MENU */
-
-.navigation-menu label {
-  width: 24px;
-  height: 24px;
-
-  display: block;
-
-  position: relative;
-
-  cursor: pointer;
-}
-
-/*
-  Esconde a imagem antiga porque ela estava
-  ficando grossa/quadrada demais.
-*/
-
-.navigation-menu label img {
-  display: none;
-}
-
-/*
-  Hambúrguer criado em CSS
-*/
-
-.navigation-menu label::before {
-  content: "";
-
-  width: 18px;
-  height: 2px;
-
-  position: absolute;
-
-  top: 5px;
-  left: 3px;
-
-  background-color: var(--text-secondary-color);
-
-  box-shadow:
-    0 6px 0 var(--text-secondary-color),
-    0 12px 0 var(--text-secondary-color);
-
-  border-radius: 2px;
-}
-
-/* =========================
-   MENU FECHADO
-   ========================= */
-
-.navigation-menu nav {
-  display: none;
-}
-
-/* =========================
-   MENU ABERTO
-   ========================= */
 
 input[type="checkbox"]:checked ~ nav {
-  width: 100%;
-
   display: block;
-
   position: absolute;
-
   top: 100%;
   left: 0;
-
-  z-index: 10;
-
+  width: 100%;
   background-color: var(--background-tertiary-color);
 }
 
-/* =========================
-   LINKS
-   ========================= */
+nav {
+  display: none;
+}
 
 .list-links {
-  margin: 0;
-  padding: 0;
-
   list-style: none;
 }
 
 .list-links li {
-  margin: 0;
-
-  padding: 16px 24px;
+  margin: 16px 0;
 }
-
 .list-links li a {
   color: var(--text-secondary-color);
-
-  font-size: 18px;
-  font-weight: var(--menu-text-weight);
-
   text-decoration: none;
-
-  white-space: nowrap;
+  font-weight: var(--menu-text-weight);
+  font-size: 24px;
+}
+.list-links li a.active {
+  text-decoration: underline;
 }
 
-/* =========================
-   MOBILE
-   ========================= */
-
-@media screen and (max-width: 767px) {
-  body > header {
-    min-height: 80px;
-
-    padding: 15px 24px;
-  }
-
-  .logo-mobile {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-/* =========================
-   TABLET
-   768px
-   ========================= */
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  body > header {
-    /*
-      Figma:
-      37px cima
-      64px conteúdo
-      37px baixo
-
-      37 + 64 + 37 = 138px
-    */
-
-    height: 138px;
-
-    padding: 37px 24px;
-  }
-
-  .logo {
-    width: 68px;
-    height: 64px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-  }
-
-  .logo-mobile {
-    width: 68px;
-    height: 64px;
-
-    display: block;
-
-    object-fit: contain;
-  }
-
-  .logo-desktop {
-    display: none;
-  }
-
+@media screen and (min-width: 768px) {
   .navigation-menu {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
+    margin-top: 0;
+    width: 467px;
   }
-
-  .navigation-menu label {
-    width: 24px;
-    height: 24px;
-  }
-
-  .navigation-menu label::before {
-    width: 18px;
-    height: 2px;
-
-    top: 5px;
-    left: 3px;
-
-    box-shadow:
-      0 6px 0 var(--text-secondary-color),
-      0 12px 0 var(--text-secondary-color);
-  }
-
-  .navigation-menu nav {
-    display: none;
-  }
-
-  input[type="checkbox"]:checked ~ nav {
-    display: block;
-  }
-}
-
-/* =========================
-   DESKTOP
-   ========================= */
-
-@media screen and (min-width: 1024px) {
-  body > header {
-    min-height: 138px;
-
-    padding: 37px 120px;
-  }
-
-  .logo {
-    width: auto;
-    height: auto;
-  }
-
-  .logo-mobile {
-    display: none;
-  }
-
-  .logo-desktop {
-    width: 260px;
-    height: 64px;
-
-    display: block;
-
-    object-fit: contain;
-  }
-
-  .navigation-menu {
-    display: block;
-  }
-
   .navigation-menu label {
     display: none;
   }
 
   .navigation-menu nav {
-    width: auto;
-
     display: block;
-
-    position: static;
-
-    background-color: transparent;
   }
-
-  .list-links {
+  .navigation-menu ul {
     display: flex;
-
+    justify-content: space-between;
     align-items: center;
-
-    gap: 40px;
-  }
-
-  .list-links li {
     padding: 0;
   }
-
-  .list-links li a {
-    font-size: 24px;
-
-    line-height: 1.2;
+  .navigation-menu li {
+    margin: 0;
   }
+}
 
+@media screen and (min-width: 1024px) {
+  .main-header {
+    padding: 38px 120px;
+  }
+  .logo {
+    width: 260px;
+    height: 64px;
+  }
+  .img-desktop {
+    display: block;
+  }
+  .img-mobile {
+    display: none;
+  }
   .navigation-menu a:hover {
     color: var(--primary-color);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .main-header {
+    padding: 38px 160px;
   }
 }
